@@ -1,0 +1,14 @@
+<html>
+  <head>
+		<script type="text/javascript">
+			async function doClick() {
+					console.log('Clicked button - performing fetch');
+					await fetch('/sw/sw.js');
+			}
+		</script>
+  </head>
+  <body>
+    This is the foo page, which has better scope for a referrer.
+		<button onclick="doClick()">Click me</button>
+  </body>
+</html>
