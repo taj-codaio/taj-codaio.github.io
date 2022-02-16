@@ -8,10 +8,9 @@ async function openCaches() {
 }
 
 self.addEventListener('install', async (event) => {
-  const installEvent = event as InstallEvent;
   console.log('Handling service worker install');
   // Perform install steps
-  installEvent.waitUntil(openCaches);
+  event.waitUntil(openCaches);
 );
 
 self.addEventListener('activate', async (_event) => {
@@ -65,8 +64,7 @@ async function fetchUrl(request) {
 
 self.addEventListener('fetch', (event) => {
 		console.log('HELLO!?');
-		const fetchEvent = event as FetchEvent;
-		console.log('Handling fetch of', fetchEvent.request.url);
-		fetchEvent.respondWith(fetchUrl(fetchEvent.request));
+		console.log('Handling fetch of', event.request.url);
+		event.respondWith(fetchUrl(event.request));
 });
 
