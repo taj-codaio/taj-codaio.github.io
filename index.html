@@ -19,7 +19,10 @@ if ('serviceWorker' in navigator) {
 		</script>
   </head>
   <body>
-    Hello world!
+    On this page, clicking the button will try to fetch <pre>/sw/sw.js</pre>, but the service-worker will not hear about it.
+		You will not see HELLO in the console log.
+		<br/>
 		<button onclick="doClick()">Click me</button>
+		<a href="/sw/foo.html">Click here to see the working case</a>
   </body>
 </html>

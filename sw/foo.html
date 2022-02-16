@@ -8,7 +8,10 @@
 		</script>
   </head>
   <body>
-    This is the foo page, which has better scope for a referrer.
+    On this page, clicking the button will also try to fetch <pre>/sw/sw.js</pre>, and the service-worker WILL hear about it.
+		You will see HELLO in the console log.
+		<br/>
 		<button onclick="doClick()">Click me</button>
+		<a href="../index.html">Click here to see the not working case</a>
   </body>
 </html>
