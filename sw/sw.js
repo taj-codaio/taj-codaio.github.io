@@ -11,7 +11,7 @@ self.addEventListener('install', async (event) => {
   console.log('Handling service worker install');
   // Perform install steps
   event.waitUntil(openCaches);
-);
+});
 
 self.addEventListener('activate', async (_event) => {
 		console.log('Handling service worker activate');
