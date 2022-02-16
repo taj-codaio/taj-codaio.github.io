@@ -12,9 +12,14 @@ if ('serviceWorker' in navigator) {
     }
   });
 }
+			async function doClick() {
+					console.log('Clicked button - performing fetch');
+					await fetch('/sw/sw.js');
+			}
 		</script>
   </head>
   <body>
     Hello world!
+		<button onclick="doClick">Click me</button>
   </body>
 </html>
